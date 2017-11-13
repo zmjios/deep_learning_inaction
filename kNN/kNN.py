@@ -21,7 +21,7 @@ def classify0(inX, dataSet, labels, k):
     classCount = {}
     for i in range(k):
         votelabel = labels[sortedDisIndicies[i]]
-        classCount[votelabel] = classCount.get(votelabel, 0) - 1
+        classCount[votelabel] = classCount.get(votelabel, 0) + 1
     sortedClassCount = sorted(classCount.items(),
                               key=operator.itemgetter(1), reverse=True)
     return sortedClassCount[0][0]
